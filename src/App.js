@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Users from "./layouts/Users"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Layout } from "antd";
+import { PrivateRoute } from "./routers/PrivateRoute";
+import PublicRoute from "./routers/PublicRouter";
+import SliderLayoutAdmin from "./components/Slider";
+import HeaderLayoutAdmin from "./components/Header";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Route path="/admin">
+                <Layout>
+                    <SliderLayoutAdmin />
+                    <HeaderLayoutAdmin />
+                    <Layout className="site-layout">
+                        <Switch>
+                            <Route exact path="/admin/users" component={Users} />
+                        </Switch>
+                    </Layout>
+                </Layout>
+            </Route>
+        </Router>
+    );
 }
 
 export default App;
