@@ -45,7 +45,7 @@ const HeaderLayoutAdmin = (props) => {
                 position: "fixed",
                 zIndex: 1,
                 background: "#001529",
-                width: "86vw",
+                width: "100%",
                 flexWrap: "nowrap",
                 //textAlign: "right",
             }}
