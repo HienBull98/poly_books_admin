@@ -14,6 +14,7 @@ function App() {
                 <Layout>
                     <SliderLayoutAdmin />
                     <HeaderLayoutAdmin />
+                   
                     <Layout className="site-layout">
                         <Switch>
                             <Route exact path="/admin/users" component={Users} />

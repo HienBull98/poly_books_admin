@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Layout, Menu, Anchor } from "antd";
 import {
+    SnippetsOutlined,
     HomeOutlined,
     CloudOutlined,
     UsergroupAddOutlined,
@@ -49,21 +50,21 @@ const SliderLayoutAdmin = (props) => {
                     mode="inline"
                     defaultSelectedKeys={[location.pathname]}
                 >
-                    <Menu.Item key="/admin/home" icon={<HomeOutlined />}>
+                    <Menu.Item key="/admin/home" icon={<TeamOutlined />}>
                         <NavLink to="/admin/users">Users</NavLink>
                     </Menu.Item>
-                    <Menu.Item key="/admin/rank-room" icon={<ShopOutlined />}>
-                        <NavLink to="/admin/rank-room">Hạng phòng</NavLink>
+                    <Menu.Item key="/admin/rank-room" icon={<SnippetsOutlined />}>
+                        <NavLink to="/admin/post">Bài đăng</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/admin/rooms" icon={<BankOutlined />}>
-                        <NavLink to="/admin/rooms">Phòng</NavLink>
+                        <NavLink to="/admin/category">Thể loại</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/admin/customers" icon={<TeamOutlined />}>
-                        <NavLink to="/admin/customers">Khách hàng</NavLink>
+                        <NavLink to="/admin/store">Cửa hàng</NavLink>
                     </Menu.Item>
 
                     <Menu.Item key="/admin/service" icon={<CloudOutlined />}>
-                        <NavLink to="/admin/service">Dịch vụ</NavLink>
+                        <NavLink to="/admin/author">Tác giả</NavLink>
                     </Menu.Item>
                     <Menu.Item key="/admin/order-room" icon={<ShoppingCartOutlined />}>
                         <NavLink to="/admin/order-room">Đặt phòng</NavLink>
